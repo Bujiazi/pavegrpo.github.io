@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Fine-Grained GRPO for Precise Preference Alignment in Flow Models</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Pave-GRPO: Beyond Instantaneous Guidance through Principled Average Velocity Decomposition</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                  <a href="https://scholar.google.com/citations?user=zO45c2QAAAAJ&hl=zh-CN" target="_blank">Pengyang Ling</a><sup>1*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=a8h9Di4AAAAJ" target="_blank">Jiazi Bu</a><sup>2*</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=XLnXvPwAAAAJ&hl=zh-CN" target="_blank">Yujie Zhou</a><sup>2*</sup>,</span>
+                  <span class="author-block">
+                  <span class="author-block">
+                    <a href="https://codegoat24.github.io/" target="_blank">Yibin Wang</a><sup>3</sup>,</span>
+                  </span>
+                  <br>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=Ju1SiBwAAAAJ&hl=en&oi=ao" target="_blank">Zhenyu Hu</a><sup>4</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=l8fN6loAAAAJ&hl=en" target="_blank">Zihan Zhang</a><sup>5</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.ca/citations?hl=en&user=mAJ1dCYAAAAJ" target="_blank">Jin Yi</a><sup>1</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=D6ol9XkAAAAJ" target="_blank">Huaian Chen</a><sup>1†</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://yuhangzang.github.io/" target="_blank">Yuhang Zang</a><sup>6†</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>University of Science and Technology of China</span>
+                    <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
+                    <span class="author-block"><sup>3</sup>Fudan University</span>
+                    <span class="author-block"><sup>4</sup>Harbin Institute of Technology</span>
+                    <span class="author-block"><sup>5</sup>Beihang University</span>
+                    <span class="author-block"><sup>5</sup>Shanghai AI Laboratory</span>
+                    <br>
+                    <span class="author-block">(*Equal Contribution)(†Corresponding Author)</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                        <!-- Arxiv PDF link -->
+                        <span class="link-block">
+                          <a href="https://arxiv.org/abs/2606.01636" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Paper</span>
+                        </a>
+
+                        <!-- Github link -->
+                        <span class="link-block">
+                          <a href="https://github.com/Bujiazi/GRPO-Series" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fab fa-github"></i>
+                          </span>
+                          <span>Code</span>
+                        </a>
+                      </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+        <div class="hero-body">
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_teaser.png" style="width:100%; display:block; margin:auto;" />
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Group Relative Policy Optimization (GRPO) has emerged as an effective paradigm for aligning flow-based generative models with human preferences. However, the high cost of group rollouts forces existing methods to use very few denoising steps, resulting in sparse temporal supervision and leaving most intermediate stages without direct reward guidance. To address this, we propose Pave-GRPO, which reformulates the GRPO objective through principled average velocity decomposition. Rather than generating expensive high-step rollouts, we maintain efficient few-step group sampling but decompose each coarse transition into an equivalent ensemble of finer sub-trajectories spanning multiple intermediate timesteps, propagating reward feedback to a denser set of temporal stages for more comprehensive preference alignment. Crucially, this incurs no additional stochastic rollout generation or reward evaluation: the decomposed sub-trajectories are constructed analytically around the observed transitions, requiring only a small number of extra velocity-network evaluations during the policy update. This design offers two benefits: (i) rollout-free horizon expansion: through the direct reuse of few-step group samples and their associated rewards, Pave-GRPO significantly broadens the effective optimization scope under a fixed sampling and reward budget; and (ii) comprehensive temporal supervision: by equivalently decomposing an instantaneous velocity target into a multi-timestep ensemble, it distributes reward signals across more intermediate stages of the denoising process, enabling finer-grained and more thorough preference optimization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<!-- Youtube video -->
+<section class="hero is-small">
+  <h2 class="title is-3" style="text-align: center;">Method</h2>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="hero-body">
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_pipeline.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered"  style="margin-top: 20px;">
+            Pave-GRPO Pipeline. 
+          </h2>
+        </div>
+        <div class="hero-body">
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_algo.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered"  style="margin-top: 20px;">
+            Pave-GRPO Algorithm
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <h2 class="title is-3" style="text-align: center;">Experiments</h2>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/table1.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/table2.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/table3.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/table4.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <h2 class="title is-3" style="text-align: center;">Visual Results</h2>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_comparison.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Figure 1: Qualitative comparison between Pave-GRPO and existing GRPO methods.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_page_1.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Figure 2: Additional qualitative results of Pave-GRPO.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_page_2.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Figure 3: Additional qualitative results of Pave-GRPO.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_page_3.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Figure 4: Additional qualitative results of Pave-GRPO.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div style="text-align: center;">
+            <img src="static/images/pavegrpo_page_4.png" style="width:80%; display:block; margin:auto;" />
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Figure 5: Additional qualitative results of Pave-GRPO.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{ling2026pave,
+          title={Pave-GRPO: Beyond Instantaneous Guidance through Principled Average Velocity Decomposition},
+          author={Ling, Pengyang and Bu, Jiazi and Zhou, Yujie and Wang, Yibin and Hu, Zhenyu and Zhang, Zihan and Jin, Yi and Chen, Huaian and Zang, Yuhang},
+          journal={arXiv preprint arXiv:2606.01636},
+          year={2026}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
