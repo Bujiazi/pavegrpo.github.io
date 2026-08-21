@@ -121,6 +121,23 @@ body {
   font-size: 0;
 }
 
+/* 让轮播项内容在垂直方向居中（.slider-item 会拉伸到满高） */
+.results-carousel .slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Method 板块的轮播项使用 Bulma 的 .hero-body（自带 flex-grow:1 会撑满高度），
+   让其自身也作为 flex 列居中容器，保证内部内容垂直居中 */
+.results-carousel .slider-item .hero-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .results-carousel video {
   margin: 0;
 }
